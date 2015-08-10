@@ -1,0 +1,199 @@
+/*
+Theme Name: CUSEC
+Theme URI: http://cusec.net
+Author: Alexander Coco
+Author URI: http://alexcoco.com
+Description: The CUSEC 2013 theme build with bootstrap.
+Version: 0.1
+*/
+
+/* Bootstrap Overrides */
+
+body { color: #333333; }
+.row { margin-top: 10px; margin-bottom: 10px; }
+a { color: #FF6700; }
+a:hover { color: #B34800; }
+ul, ol { margin-bottom: 0; }
+.carousel { margin-bottom: 0; }
+.navbar .nav > li > a { padding-left: 10px; padding-right: 10px; }
+
+/* To render above logo */
+.navbar, .navbar-inner { z-index: 900; }
+
+/* Removes gradient background and sets text color to white */
+.navbar-inner {
+	background-image: none;
+	background-color: #FF6700;
+	filter: none;	
+	color: #FFF;
+}
+
+/* Sets color for small display menu collapse button */
+.navbar .btn-navbar,
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] { background-image: none; background-color: #FF6700; }
+.navbar .btn-navbar .icon-bar { background-color: #B34800; }
+
+/* Remove curved corners from navbar */
+.navbar-inner { border-radius: 0; }
+
+/* Set navbar color to white */
+.navbar .nav > li > a { color: #FFF; }
+
+/* Darker orange for active navbar items */
+.navbar .nav .active > a,
+.navbar .nav .active:hover > a,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle { background-color: #A24519; color: #FFF; }
+
+/* Border and text color for search input in navbar */
+.navbar-search input[type="text"] { background-color: #FFF; border-color: #A24519; color: #000; }
+.navbar-search .add-on { background-color: #A24519; border-color: #A24519; cursor: pointer; }
+
+/* Border color for search form on small displays (when collapsed) */
+@media(max-width: 1119px) { .navbar .navbar-search { border-bottom: 0; border-top-color: #E65D00; } }
+
+/* Smaller height fits anchors in navbar for full navbar on larger displays */
+@media(min-width: 1120px) { .navbar-inner { height: 30px; } }
+
+/* Size and font for anchor in full navbar for larger displays */
+@media(min-width: 1120px) {
+	.navbar .nav li a {
+		font-size: 1.1em;
+		height: 30px;
+		line-height: 30px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin: 0;
+		
+		font-weight: bold;
+	}
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/* Logo styles */
+
+#logo {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/* Article & page styles */
+
+article .title { color: inherit; }
+article .content { margin-top: 10px; }
+
+/* Test this */
+article .content img {
+	max-height: 570px;
+	max-width: 570px;
+}
+
+/* TODO */
+div.organizer, div.speaker, div.sponsor { clear: both; margin-bottom: 40px; min-height: 150px; }
+
+/* Float image left and give it some room on right and bottom */
+div.organizer .photo, div.speaker .photo { float: left; margin-right: 10px; margin-bottom: 10px; }
+
+/* TODO */
+div.sponsor .photo { display: block; margin: 50px auto; }
+
+/*------------------------------------------------------------------------------------------*/
+
+@media(min-width: 1120px) {
+	/* TODO */
+	article { min-height: 200px; }
+
+	/* Sticky Footer */
+	/* Test this
+	* { margin: 0; padding: 0; }
+	html, body { height: 100%; }
+	body { position: relative; }
+	*/
+	
+	/* TODO: Remove #not-footer { min-height: 100%; } 
+	#main-content { overflow: auto; padding-bottom: 204px; }*/
+	#jagged { margin-top: 20px; }
+	/* TODO: Remove #footer {
+		position: relative;
+		margin-top: -204px;
+		height: 135px;
+		clear: both;
+		
+		padding-top: 20px;
+		border-top: 1px solid #EEE;
+	} */
+}
+
+/* TODO */
+@media(max-width: 767px) {
+	body { padding: 0; }
+	.container { padding: 0 20px; }
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/* Front page */
+
+/* Removed formatting for unordered list of recent posts */
+.news-list {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+/* Give sections minimum height */
+@media(min-width:1120px) {.front-page-section { min-height: 300px; } }
+
+/* Orange border above headers */
+.front-page-header { border-top: 4px solid #FF6700; margin-top: 20px; }
+
+/* Font and spacing for section headers */
+.front-page-header h2 { font-weight: 300; margin-bottom: 10px; }
+
+/* Custom style for recent items */
+.recent_post { font-weight: bold; }
+
+/*------------------------------------------------------------------------------------------*/
+
+/* TODO */
+#footer .sponsor { text-align: center; }
+#footer .sponsor img { height: auto; margin: 10px 0; }
+
+/* TODO */
+.wrap {
+	width: 570px;
+	margin: 0 auto;
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/* Chirp styles */
+
+.chirp {
+	list-style: none;
+	margin: 0;
+	padding: 5px 0 0 0;
+}
+
+.chirp li {
+	padding: 5px 0;
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/* Facebook like */
+
+#fb-root { display: none; }
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+	width: 100% !important;
+}
